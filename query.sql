@@ -45,3 +45,24 @@ SELECT * FROM transactions ORDER BY transaction_id DESC LIMIT 3;
 
 SELECT a.account_id, a.account_number, a.balance , a.account_type , c.full_name AS customer_name  , ad.full_name AS advisor_name
 6 accounts a JOIN customers c ON customerid = customer_id JOIN advisors ad ON advisorid = advisor_id;
+
+/* Bonus */
+SELECT Accounts.*, COUNT(t.transaction_id) AS total_transactions
+FROM Accounts
+LEFT JOIN Transactions t ON account_id = t.accountid
+GROUP BY  account_id, account_number;
+
+SELECT Customers.* , SUM(a.balance) AS total_balance
+FROM customers
+LEFT JOIN accounts a ON customer_id = a.customerid
+GROUP BY customer_id , full_name;
+
+ALTER TABLE accounts ADD created_at DATE;; 
+
+SELECT 
+    Accounts.*,
+    SUM(CASE WHEN t.transaction_type = 'debit' THEN t.amout ELSE 0 END) AS debit_total,
+    SUM(CASE WHEN t.transaction_type = 'credit' THEN t.amout ELSE 0 END) AS credit_total
+FROM accounts
+LEFT JOIN transactions t ON account_id = t.accountid
+GROUP BY account_id, account_number;
