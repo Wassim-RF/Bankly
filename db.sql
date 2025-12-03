@@ -22,3 +22,13 @@ CREATE TABLE IF NOT EXISTS Accounts (
     FOREIGN KEY (customerid) REFERENCES Customers(customer_id),
     FOREIGN KEY (advisorid) REFERENCES Advisors(advisor_id)
 );
+
+CREATE TABLE IF NOT EXISTS Transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    amout DECIMAL(12,2),
+    transaction_type ENUM('debit', 'credit'),
+    transaction_date DATE,
+    accountid INT,
+    FOREIGN KEY (accountid) REFERENCES Accounts(account_id)
+);
+
