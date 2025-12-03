@@ -32,3 +32,20 @@ CREATE TABLE IF NOT EXISTS Transactions (
     FOREIGN KEY (accountid) REFERENCES Accounts(account_id)
 );
 
+INSERT INTO customers (full_name , email , phone , register_date) 
+VALUES ('Wassim Rifi' , 'wassimrifi1303@gmail.com' , '0651909718' , CURDATE());
+
+INSERT INTO customers (full_name , email , phone , register_date) 
+VALUES ('Mouad Abbadi' , 'mouadaa123@gmail.com' , '0770736599' , CURDATE());
+
+INSERT INTO customers (full_name , email , phone , register_date) 
+VALUES ('Saad Shimi' , 'shimi098saad@gmail.com' , '0668958420' , CURDATE());
+
+INSERT INTO customers (full_name , email , phone , register_date) 
+VALUES ('Monsif Howari' , 'monsifmonsif736@gmail.com' , '0785943278' , CURDATE());
+
+INSERT INTO customers (full_name , email , phone , register_date) 
+VALUES ('Hakim Allouani' , 'hallouiani012@gmail.com' , '0688654895' , CURDATE());
+
+INSERT INTO customers (full_name , email , phone , register_date) 
+VALUES ('Saad Yazidi' , 'yazidisaa09@gmail.com' , '0658789501' , CURDATE());
