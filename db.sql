@@ -49,3 +49,33 @@ VALUES ('Hakim Allouani' , 'hallouiani012@gmail.com' , '0688654895' , CURDATE())
 
 INSERT INTO customers (full_name , email , phone , register_date) 
 VALUES ('Saad Yazidi' , 'yazidisaa09@gmail.com' , '0658789501' , CURDATE());
+
+INSERT INTO advisors (full_name , email) VALUES ('Fatima Lock' , 'fatima76lock@gmail.com');
+
+INSERT INTO advisors (full_name , email) VALUES ('Lhaj Dipanaj' , 'kandipani123@gmail.com');
+
+INSERT INTO advisors (full_name , email) VALUES ('Lmoak Robal' , 'howamoak258@gmail.com');
+
+INSERT INTO Accounts (account_number , balance , account_type , customerid , advisorid)
+VALUES ('15125862101548' , 1200.10 , 'Checking' , 1 , 2);
+
+INSERT INTO Accounts (account_number , balance , account_type , customerid , advisorid)
+VALUES ('15485962130022' , -10.00 , 'Checking' , 5 , 1);
+
+INSERT INTO Accounts (account_number , balance , account_type , customerid , advisorid)
+VALUES ('17846035487973' , 20000.00 , 'Business' , 2 , 1);
+
+INSERT INTO Accounts (account_number , balance , account_type , customerid , advisorid)
+VALUES ('1856302715862' , 120.50 , 'Savings' , 5 , 1);
+
+INSERT INTO Accounts (account_number , balance , account_type , customerid , advisorid)
+VALUES ('12154879623015' , 1110000.20 , 'Business' , 1 , 3);
+
+INSERT INTO Accounts (account_number , balance , account_type , customerid , advisorid)
+VALUES ('18452684950326' , 0.50 , 'Checking' , 6 , 1);
+
+INSERT INTO Accounts (account_number , balance , account_type , customerid , advisorid)
+VALUES ('15486218702695' , 100.00 , 'Savings' , 3 , 2);
+
+INSERT INTO Accounts (account_number , balance , account_type , customerid , advisorid)
+VALUES ('14203095840015' , 100000.75 , 'Business' , 4 , 1);
