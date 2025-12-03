@@ -79,3 +79,18 @@ VALUES ('15486218702695' , 100.00 , 'Savings' , 3 , 2);
 
 INSERT INTO Accounts (account_number , balance , account_type , customerid , advisorid)
 VALUES ('14203095840015' , 100000.75 , 'Business' , 4 , 1);
+
+INSERT INTO Transactions (amout , transaction_type , transaction_date , accountid) 
+VALUES (70.00 , 'debit' , CURDATE()  , 3);
+
+INSERT INTO Transactions (amout , transaction_type , transaction_date , accountid) 
+VALUES (1000.00 , 'credit' , CURDATE()  , 7);
+
+INSERT INTO Transactions (amout , transaction_type , transaction_date , accountid) 
+VALUES (10000.00 , 'credit' , CURDATE()  , 4);
+
+INSERT INTO Transactions (amout , transaction_type , transaction_date , accountid) 
+VALUES (10.00 , 'debit' , CURDATE()  , 3);
+
+INSERT INTO Transactions (amout , transaction_type , transaction_date , accountid) 
+VALUES (5000.00 , 'credit' , CURDATE()  , 4);
